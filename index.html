@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Twin Cities: The Jewel of Thessia — Daggerheart Adventure (T2-L3)</title>
+  <title>The Outrageous Okona — Daggerheart Adventure (T2-L3)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,7 +53,7 @@
     table.skill td, table.skill th{border-bottom:1px solid rgba(255,255,255,.15);padding:.45rem .5rem}
 
     /* Top utility bar (Expand/Collapse) */
-    .util-bar{position:sticky;top:0;z-index:50;background:rgba(20,30,44,.85);backdrop-filter:saturate(140%) blur(6px)}
+    .util-bar{position:sticky;top:0;z-index:50;background:rgba(20,30,44,.85);backdrop-filter:sate(140%) blur(6px)}
 
     /* Floating back-to-top */
     #backTop{position:fixed;right:1rem;bottom:1rem;display:none}
@@ -76,13 +76,12 @@
     <!-- Sidebar -->
     <aside class="sidebar-grad border-r border-white/20 sticky top-0 h-screen hidden lg:flex flex-col">
       <div class="p-5 border-b border-white/20">
-        <h1 class="text-xl font-semibold font-display">Twin Cities</h1>
-        <p class="text-sm text-white/80">The Jewel of Thessia • T2-L3 • 5 PCs (4-PC trims included)</p>
+        <h1 class="text-xl font-semibold font-display">NAVIGATION</h1>
       </div>
       <nav id="sidebarNav" class="p-4 space-y-1 overflow-y-auto">
         <a class="nav-link" href="#welcome">Welcome</a>
         <a class="nav-link" href="#setting">The Setting</a>
-        <a class="nav-link" href="#whatsgoingon">What’s Really Going On</a>
+        <a class="nav-link" href="#whatsgoingon">The Intrigue</a>
         <a class="nav-link" href="#developments">Recent Developments</a>
         <a class="nav-link" href="#summary">Adventure Summary</a>
         <a class="nav-link" href="#hooks">Adventure Hooks</a>
@@ -101,8 +100,8 @@
       <!-- Top utility bar (Expand/Collapse beats) -->
       <div class="util-bar border-b border-white/20 p-3 flex items-center justify-between">
         <div>
-          <div class="text-xs uppercase tracking-wide text-white/70">Daggerheart — T2-L3</div>
-          <h1 class="text-lg font-semibold font-display">Twin Cities: The Jewel of Thessia</h1>
+          <div class="text-xs uppercase tracking-wide text-white/70">A Daggerheart Adventure for Level 3 characters</div>
+          <h1 class="text-lg font-semibold font-display">The Outrageous Okona</h1>
         </div>
         <div class="flex gap-2">
           <button id="expandAll" class="text-xs px-3 py-1 rounded bg-white/15 hover:bg-white/25">Expand All</button>
@@ -113,70 +112,66 @@
       <!-- Welcome -->
       <section id="welcome" class="p-6 lg:p-10">
         <h2 class="text-3xl font-bold text-gold font-display">Welcome</h2>
-        <p class="mt-3 text-white/90">Inspired by <em>Star Trek: TNG — The Outrageous Okona</em>. The party arrives among the twin river cities of <span class="house-bellavaro">Ravenor</span> (Patrician) and <span class="house-marivale">Vienetta</span> (Mercantile), where a quiet scandal over the <strong>Jewel of Thessia</strong> has drawn rival bounty crews. The charming courier <strong>Okona</strong> has stepped on too many toes; both houses post <em>alive-only</em> bounties. A ruthless <strong>Bounty Queen</strong> wants to make an example, while the families push to keep things behind closed doors.</p>
-        <div class="mt-4 grid sm:grid-cols-3 gap-3">
-          <div class="p-4 rounded border border-white/20 bg-white/15">
-            <div class="text-xs uppercase text-white/70">Party</div>
-            <div class="font-medium">5 PCs • Tier 2 Level 3</div>
-            <div class="text-white/80 text-sm">Milestone: Level 4 on adventure completion</div>
-          </div>
-          <div class="p-4 rounded border border-white/20 bg-white/15">
-            <div class="text-xs uppercase text-white/70">Mix Target</div>
-            <div class="font-medium">Combat 40% • Social 40% • Urban Explore 20%</div>
-          </div>
-          <div class="p-4 rounded border border-white/20 bg-white/15">
-            <div class="text-xs uppercase text-white/70">Scaling to 4 PCs</div>
-            <div class="text-sm">Trim 20–25% BP; remove one body or hazard lane. Solo: Relentless 3→2 <span class="text-white/70">or</span> reduce damage one die <span class="text-white/70">or</span> remove one Engine lane.</div>
-          </div>
-        </div>
+        <p class="mt-3 text-white/90">Welcome, Game Master. This adventure module provides everything you need to guide a party of Tier 2, Level 3 heroes through a web of intrigue, high-stakes chases, and dramatic confrontations in the twin cities of Ravenor and Vienetta. The module is designed for a balance of urban exploration, social maneuvering, and thrilling combat, culminating in a dynamic Solo boss fight where words can be as sharp as swords.</p>
+        <p class="mt-3 text-white/90">The party arrives among the twin river cities of <span class="house-bellavaro">Ravenor</span> and <span class="house-marivale">Vienetta</span>, where a quiet scandal over the <strong>Jewel of Thessia</strong> has drawn rival bounty crews. The charming courier <strong>Okona</strong> has stepped on too many toes; both houses post bounties, to capture the young rogue <em>alive</em>. A ruthless <strong>Bounty Queen</strong> wants to make an example, while the families push to keep things behind closed doors.</p>
       </section>
 
       <section id="setting" class="p-6 lg:p-10 border-t border-white/20 bg-white/15">
         <h2 class="text-2xl font-semibold font-display">The Setting</h2>
-        <ul class="list-disc pl-6 mt-3 space-y-2 text-white/90">
-          <li><strong>Ravenor</strong> — oaths and salons; dueling schools; House <span class="house-bellavaro">Bellavaro</span> (motto: <em>Virtù e Forma</em>).</li>
-          <li><strong>Vienetta</strong> — counting-houses, docks, customs; House <span class="house-marivale">Marivale</span> (motto: <em>Apri la Via</em>).</li>
-          <li><strong>Bridge & Ferries</strong> — the great span and night ferries; perfect for ambush, pursuit, and quiet meetings.</li>
-        </ul>
+        <div class="space-y-4 text-white/90">
+          <p>The Twin Cities of <strong>Ravenor</strong> and <strong>Vienetta</strong> stand on opposite banks of the wide, swift Artessa River, acting as the region's beating heart of nobility and commerce. They are joined by the <strong>Cattedrale dei Due Ponti</strong> (Cathedral of the Two Bridges), a massive, ancient bridge covered in shops, shrines, and toll-booths that serves as a vital artery of trade and a neutral meeting ground. The entire area is currently swelled with travelers for the annual Festival of Lanterns, choking the gates, markets, and ferries with opportunistic crowds.</p>
+          
+          <p><strong><span class="house-bellavaro">Ravenor (The Patrician City):</span></strong> West of the river lies Ravenor, a city of high walls, marble facades, and ancestral pride. It is home to the ancient noble families, prestigious dueling schools, and secretive salons where political futures are decided. Ravenor is ruled by <strong>House Bellavaro</strong>, whose motto, <em>"Virtù e Forma"</em> (Virtue and Form), reflects their rigid obsession with honor, reputation, and public perception above all else.</p>
+          
+          <p><strong><span class="house-marivale">Vienetta (The Mercantile City):</span></strong> East of the river, Vienetta sprawls with a chaotic energy. It is a city of "new money," driven by the ceaseless activity of its counting-houses, customs offices, and sprawling docks. The air smells of foreign spices, salt, and coin. Vienetta is dominated by <strong>House Marivale</strong>, whose motto, <em>"Apri la Via"</em> (Open the Way), showcases their pragmatic and relentless pursuit of profit and expansion.</p>
+          
+          <p><strong><span class="text-river">The River Wardens:</span></strong> Patrolling the bridge, ferries, and quays are the <strong>River Wardens</strong>. Marked by their silver-wave brooches, they are a neutral constabulary force funded by both Houses, tasked with keeping the peace and ensuring commerce flows. They care more for order than for noble feuds and are the key to the city's formal "private arbitration" process, which is held in an Oath-Court where blue flames are said to gutter in the presence of a lie.</p>
+        </div>
       </section>
 
       <section id="whatsgoingon" class="p-6 lg:p-10">
-        <h2 class="text-2xl font-semibold font-display">What’s Really Going On</h2>
-        <p class="mt-2 text-white/90"><strong>Devin Marivale</strong> entrusted the <strong>Jewel of Thessia</strong> (a Marivale heirloom reset) to <strong>Okona</strong> to deliver—privately—to <strong>Yanar Bellavaro</strong> as a betrothal gift. Okona was cornered by minor thugs and rival bounty crews; in the chaos the jewel can be snatched, but it is <em>always recoverable</em>. Both houses want the matter resolved by <strong>private arbitration</strong>, not public scandal. <strong>River Wardens</strong> are neutral peacekeepers who will serve a summons and keep tempers cool.</p>
-        <p class="mt-2 text-white/80">Yanar is visibly pregnant. Only the lovers—and Okona—know the truth at the start.</p>
+        <h2 class="text-2xl font-semibold font-display">The Intrigue</h2>
+        <div class="space-y-4 text-white/90">
+          <p>At the heart of the feud is a forbidden romance between <strong>Yanar Bellavaro</strong> and <strong>Devin Marivale</strong>, the heirs to the two rival houses. Their secret relationship has resulted in Yanar becoming pregnant with Devin's child—a truth only she knows.</p>
+          <p>To prevent a catastrophic feud, Yanar desperately lied to her stern father, claiming the father was <strong>Okona</strong>, a charming and transient rogue-courier she barely knows. This lie was meant to buy time, but it backfired spectacularly. Her father, enraged at this perceived dishonor from a low-status outsider, has issued a generous <em>"alive-only"</em> bounty for Okona, intending to force a marriage at sword-point to "correct" the situation.</p>
+          <p>Simultaneously, Devin Marivale, wanting to do right by Yanar but unaware of her lie, hired Okona for a separate, simple-sounding job: to deliver the <strong>Jewel of Thessia</strong> (a reset Marivale heirloom) to Yanar as a secret betrothal ring. When House Marivale discovered their heirloom was missing—and seemingly in the hands of the same rogue now publicly accused by House Bellavaro—they assumed theft. They issued their *own* "alive-only" bounty for Okona to recover the jewel.</p>
+          <p>Okona is now trapped in the middle, hunted by two great houses and every bounty hunter in the city for reasons he doesn't fully understand. He's a scapegoat for a crime of passion (which he didn't commit) and a thief of an heirloom (which he was trying to deliver). Only Yanar knows the complete truth, while Devin and Okona are left to navigate the explosive consequences of their partial knowledge.</p>
+        </div>
       </section>
 
       <section id="developments" class="p-6 lg:p-10 border-t border-white/20 bg-white/15">
         <h2 class="text-2xl font-semibold font-display">Recent Developments</h2>
-        <ul class="list-disc pl-6 mt-3 space-y-1 text-white/90">
-          <li>Okona’s courier skiff impounded; <em>coded letters</em> seized.</li>
-          <li>The Jeweler insists the Jewel is an <em>heirloom reset</em>; ledgers exist.</li>
-          <li>Midwife seen near Bellavaro estate; tincture purchases noted.</li>
-          <li>Bounty Queen hires a <em>Sibling Hunter Duo</em> as her vanguard.</li>
-          <li>Night ferry chits and patrol logs suggest a secret crossing.</li>
-        </ul>
+        <div class="space-y-4 text-white/90">
+          <p>The simmering rivalry between House Bellavaro and House Marivale has finally boiled over, and the talk of the entire city—from its marble salons to its dockside taverns—is of the rogue at the center of it all: the courier Okona. What began as a private scandal has become a public spectacle.</p>
+          <p>Public bounty sheets have been posted by both Houses, an unprecedented and crass move that has the city buzzing. In Ravenor, the rumors are of grave dishonor to the Bellavaro name. In Vienetta, the story is of the brazen theft of a priceless heirloom, the Jewel of Thessia. Both bounties are massive, and both demand Okona be brought in <em>alive</em>.</p>
+          <p>This massive payday has drawn a dangerous influx of bounty hunters, including the notorious Bounty Queen and her elite vanguard. All of this chaos descends as the city swells for the Festival of Lanterns. The River Wardens, already stretched thin, are struggling to prevent the volatile competition between hunter crews from erupting into open street violence. Meanwhile, Okona's courier skiff has been found impounded, but the man himself has vanished, along with the jewel and the truth of the scandal.</p>
+        </div>
       </section>
 
       <section id="summary" class="p-6 lg:p-10">
         <h2 class="text-2xl font-semibold font-display">Adventure Summary</h2>
-        <ol class="list-decimal pl-6 mt-3 space-y-1 text-white/90">
-          <li><strong>Beat 1:</strong> Rumors & bounty at the gates; PCs may accept the contract.</li>
-          <li><strong>Beat 2:</strong> Track Okona — early find = <em>Escort</em>; late find = <em>Chase</em> to recover the Jewel.</li>
-          <li><strong>Beat 3:</strong> The Bounty Queen’s posse (Sibling Duo) tries to take Okona.</li>
-          <li><strong>Beat 4:</strong> River Wardens serve a summons to <em>private arbitration</em> (oppose and risk jail, or comply).</li>
-          <li><strong>Beat 5:</strong> Arbitration hearing: both houses present grievances; evidence and testimony can clear Okona; Devin confesses.</li>
-          <li><strong>Beat 6:</strong> After the hearing, the Bounty Queen makes one last grab (SOLO).</li>
-        </ol>
-        <p class="mt-2 text-white/70">Alternate closure: PCs may turn Okona in at any time. If he still holds the Jewel, this can produce a <em>good ending</em>; without it, a <em>bad ending</em>.</p>
+        <div class="space-y-4 text-white/90">
+          <p>The adventure throws the heroes into the heart of a city-wide scandal. Arriving in Ravenor amidst the Festival of Lanterns, they are immediately caught in the buzz surrounding the "Outrageous Okona," a rogue courier wanted by both rival ruling houses. After hearing the public rumors at the city gates, the party must track down the elusive courier, either finding him mid-chase on the rooftops or, if they are too slow, discovering he's been ambushed and the precious "Jewel of Thessia" stolen by dock thugs.</p>
+          <p>Securing Okona and the jewel makes the party a target. They are soon confronted by the Bounty Queen's elite vanguard, the Sibling Hunters, in a dangerous clash on the city quays. Just as the conflict threatens to escalate, the neutral River Wardens intervene, serving a summons for all parties to attend a private arbitration hearing. This tense social encounter is the party's chance to use the clues they've gathered to navigate the grievances of both houses, forcing the truth of the secret romance and pregnancy into the light. Their success or failure at this hearing will determine the final confrontation, where the spurned Bounty Queen, unwilling to be denied her prize, makes one last, decisive move to capture Okona on the steps of the grand cathedral.</p>
+        </div>
       </section>
 
       <section id="hooks" class="p-6 lg:p-10 border-t border-white/20 bg-white/15">
         <h2 class="text-2xl font-semibold font-display">Adventure Hooks</h2>
-        <ul class="list-disc pl-6 mt-3 space-y-1 text-white/90">
-          <li><strong>Rich, Quiet Collar:</strong> both houses post generous <em>alive-only</em> bounties—but want no scandal.</li>
-          <li><strong>Courier’s Plea:</strong> Protect Okona to the end and he’ll pay double—<em>and</em> hand over the truth.</li>
-          <li><strong>Keep the Peace:</strong> Wardens quietly prefer order and will favor cooperative PCs.</li>
-        </ul>
+        <div class="space-y-4 text-white/90">
+            <div>
+              <h3 class="font-semibold text-gold">1. The Warden's Deputy (Duty & Justice)</h3>
+              <p>An old contact within the River Wardens pulls the party aside. The city is a powder keg with the Festival of Lanterns and the competing bounties. The Wardens are stretched thin and can't risk a public street war. They deputize the party with a simple, urgent mission: find Okona first. Bring him to the neutral ground of the Oath-Court for arbitration, *before* the Bounty Queen or the house enforcers can make a bloody spectacle of him. This is a job for heroes who value order and justice over coin.</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gold">2. The Scapegoat's Gambit (Gold & Thrills)</h3>
+              <p>The party, known for "discreet acquisitions and extractions," receives a coded message from Okona himself. He claims he's been framed in a high-stakes noble spat, is carrying precious cargo, and is willing to pay double the bounty to any crew smart enough to keep him alive. He needs an escort to the Cattedrale dei Due Ponti by the festival's peak, where he promises a "dramatic reveal" will clear his name and secure their payment. This hook is for mercenary or rogue-minded parties who love a high-stakes chase and a massive payout.</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gold">3. An Ancient Debt (Mystery & Obligation)</h3>
+              <p>One of the PCs (or their patron) owes a generations-old life-debt to House Marivale. A desperate and secret message arrives from the heir, Devin Marivale: "My house believes I was robbed. House Bellavaro believes I am a scoundrel. Both hunt a man who is only guilty of helping me. The future of my house, and a life I hold dear, rests on this. Find Okona. Protect him and the package he carries at all costs. Bring him to the arbitration so I can make this right." This hook plunges the party directly into the heart of the intrigue, forcing them to unravel the mystery to honor their obligation.</p>
+            </div>
+        </div>
       </section>
 
       <!-- Beats (collapsible like Hollowshade) -->
@@ -185,14 +180,14 @@
         <p class="text-white/80 mt-2">Each Beat includes a scene goal, environment, suggested adversaries, countdowns, outcomes, and <span class="italic">4-PC trim</span>. Numbers/stat blocks are T2-L3.</p>
 
         <!-- Beat 1: Rumors at the Gate -->
-        <details class="group border border-white/20 rounded mt-4" open>
+        <details class="group border border-white/20 rounded mt-4">
           <summary class="cursor-pointer select-none p-4 bg-ink/40 hover:bg-ink/30 flex items-center justify-between">
             <span class="font-semibold font-display">Beat 1 — Whispers at Westgate (On-Ramp)</span>
             <span class="text-xs text-white/60">Type: Exploration → Social</span>
           </summary>
           <div class="p-4 space-y-3">
             <blockquote class="read-aloud">
-              <button class="copy-btn" onclick="copyReadAloud(this)">Copy</button>
+              <button class="copy-btn" onclick="window.copyReadAloud(this)">Copy</button>
               The crowds press thick at the Westgate—hawkers, litters, and river-salted sailors. Bounty sheets for Okona flap on every post. A Warden bell rings for order as a rumor knifes through the crowd: “That rogue courier was just seen on the rooftops near the dyers!”
             </blockquote>
             <div>
@@ -207,12 +202,12 @@
             <div class="p-3 rounded bg-white/10 border border-white/20">
               <div class="font-semibold">Quick Stat Blocks</div>
               <div class="flex flex-wrap gap-2 mt-2 text-sm">
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showEnvironment('gatePress')">Environment</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showAdversary('informantSkulk')">Informant Skulk</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showAdversary('pickpockets')">Pickpocket Minions</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showAdversary('cityWarden')">River Warden (Standard)</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showSocial('b1')">Social</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showLoot('b1')">Loot</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showEnvironment('gatePress')">Environment</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showAdversary('informantSkulk')">Informant Skulk</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showAdversary('pickpockets')">Pickpocket Minions</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showAdversary('cityWarden')">River Warden (Standard)</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showSocial('b1')">Social</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showLoot('b1')">Loot</button>
               </div>
             </div>
             <div>
@@ -230,7 +225,7 @@
           </summary>
           <div class="p-4 space-y-3">
             <blockquote class="read-aloud">
-              <button class="copy-btn" onclick="copyReadAloud(this)">Copy</button>
+              <button class="copy-btn" onclick="window.copyReadAloud(this)">Copy</button>
               Slate roofs ripple ahead; laundry lines snap in the wind. A bright-cloaked figure vaults a gap with a mocking bow—Okona. Rivals scramble after him with grapnels and curses.
             </blockquote>
             <div>
@@ -245,11 +240,11 @@
             <div class="p-3 rounded bg-white/10 border border-white/20">
               <div class="font-semibold">Quick Stat Blocks</div>
               <div class="flex flex-wrap gap-2 mt-2 text-sm">
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showEnvironment('rooftops')">Environment</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showAdversary('grapnelSkulk')">Grapnel Skulk</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showAdversary('rookieMinions')">Rookie Hunters (Minions)</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showSocial('b2')">Social</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showLoot('b2')">Loot</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showEnvironment('rooftops')">Environment</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showAdversary('grapnelSkulk')">Grapnel Skulk</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showAdversary('rookieMinions')">Rookie Hunters (Minions)</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showSocial('b2')">Social</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showLoot('b2')">Loot</button>
               </div>
             </div>
             <div>
@@ -270,7 +265,7 @@
           </summary>
           <div class="p-4 space-y-3">
             <blockquote class="read-aloud">
-              <button class="copy-btn" onclick="copyReadAloud(this)">Copy</button>
+              <button class="copy-btn" onclick="window.copyReadAloud(this)">Copy</button>
               Okona is bloodied but defiant; a dockside crew tears away with a small velvet case—the Jewel. Alleys and warehouse lanes become a gauntlet of hooks, nets, and swinging crates.
             </blockquote>
             <div>
@@ -285,10 +280,10 @@
             <div class="p-3 rounded bg-white/10 border border-white/20">
               <div class="font-semibold">Quick Stat Blocks</div>
               <div class="flex flex-wrap gap-2 mt-2 text-sm">
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showEnvironment('warehouse')">Environment (alleys/warehouse)</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showAdversary('dockMinions')">Dock Thugs (Minions)</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showAdversary('skulkLookout')">Rafter Lookout (Skulk)</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showLoot('b2a')">Loot</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showEnvironment('warehouse')">Environment (alleys/warehouse)</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showAdversary('dockMinions')">Dock Thugs (Minions)</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showAdversary('skulkLookout')">Rafter Lookout (Skulk)</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showLoot('b2a')">Loot</button>
               </div>
             </div>
             <div>
@@ -308,7 +303,7 @@
           </summary>
           <div class="p-4 space-y-3">
             <blockquote class="read-aloud">
-              <button class="copy-btn" onclick="copyReadAloud(this)">Copy</button>
+              <button class="copy-btn" onclick="window.copyReadAloud(this)">Copy</button>
               Lantern-lines sway over the quay. A woman with hook-swords smiles, a man levels a repeating crossbow. “The Queen sends her regards. The courier stays breathing. You don’t.”
             </blockquote>
             <div>
@@ -319,10 +314,10 @@
             <div class="p-3 rounded bg-white/10 border border-white/20">
               <div class="font-semibold">Quick Stat Blocks</div>
               <div class="flex flex-wrap gap-2 mt-2 text-sm">
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showEnvironment('cranes')">Environment</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showAdversary('siblingDuo')">Sibling Hunter Duo</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showAdversary('supportStandard')">Support Standards</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showLoot('b3')">Loot</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showEnvironment('cranes')">Environment</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showAdversary('siblingDuo')">Sibling Hunter Duo</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showAdversary('supportStandard')">Support Standards</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showLoot('b3')">Loot</button>
               </div>
             </div>
             <div>
@@ -342,7 +337,7 @@
           </summary>
           <div class="p-4 space-y-3">
             <blockquote class="read-aloud">
-              <button class="copy-btn" onclick="copyReadAloud(this)">Copy</button>
+              <button class="copy-btn" onclick="window.copyReadAloud(this)">Copy</button>
               River Wardens in silver-wave brooches approach with open hands. “By the peace of the Twin Cities, present yourselves for private arbitration. No scandal—no blood.”
             </blockquote>
             <div>
@@ -360,8 +355,8 @@
             <div class="p-3 rounded bg-white/10 border border-white/20">
               <div class="font-semibold">Quick Stat Blocks</div>
               <div class="flex flex-wrap gap-2 mt-2 text-sm">
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showSocial('b6')">Social</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showAdversary('cityWarden')">River Wardens</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showSocial('b6')">Social</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showAdversary('cityWarden')">River Wardens</button>
               </div>
             </div>
           </div>
@@ -375,7 +370,7 @@
           </summary>
           <div class="p-4 space-y-3">
             <blockquote class="read-aloud">
-              <button class="copy-btn" onclick="copyReadAloud(this)">Copy</button>
+              <button class="copy-btn" onclick="window.copyReadAloud(this)">Copy</button>
               Blue oath-flames gutter when lies are told. Bellavaro pride and Marivale gold face each other across polished stone while clerks scratch every word.
             </blockquote>
             <div>
@@ -396,9 +391,9 @@
             <div class="p-3 rounded bg-white/10 border border-white/20">
               <div class="font-semibold">Quick Stat Blocks</div>
               <div class="flex flex-wrap gap-2 mt-2 text-sm">
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showEnvironment('oathcourt')">Environment</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showSocial('b9')">Social Interludes</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showLoot('b7')">Loot</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showEnvironment('oathcourt')">Environment</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showSocial('b9')">Social Interludes</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showLoot('b7')">Loot</button>
               </div>
             </div>
             <div>
@@ -419,7 +414,7 @@
           </summary>
           <div class="p-4 space-y-3">
             <blockquote class="read-aloud">
-              <button class="copy-btn" onclick="copyReadAloud(this)">Copy</button>
+              <button class="copy-btn" onclick="window.copyReadAloud(this)">Copy</button>
               The courthouse doors boom open as the crowd spills to the steps. The Bounty Queen’s energized rapier crackles as nets snap from hidden launchers. “Contract’s still good—until you make me let go.”
             </blockquote>
             <div>
@@ -433,9 +428,9 @@
             <div class="p-3 rounded bg-white/10 border border-white/20">
               <div class="font-semibold">Quick Stat Blocks</div>
               <div class="flex flex-wrap gap-2 mt-2 text-sm">
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showEnvironment('cathedral')">Environment</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showAdversary('bountyQueen')">The Bounty Queen (Solo)</button>
-                <button class="px-2 py-1 bg-white/20 rounded" onclick="showLoot('b9')">Loot</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showEnvironment('cathedral')">Environment</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showAdversary('bountyQueen')">The Bounty Queen (Solo)</button>
+                <button class="px-2 py-1 bg-white/20 rounded" onclick="window.showLoot('b9')">Loot</button>
               </div>
             </div>
           </div>
@@ -529,7 +524,7 @@
     }
 
     // ===== UTIL for modal tables =====
-    const row = (k,v)=>`<tr class='border-b border-white/20'><td class='py-1 pr-3 text-white/70'>${k}</td><td class='py-1'>${v}</td></tr>`;
+    const row = (k,v)=>`<tr class'border-b border-white/20'><td class='py-1 pr-3 text-white/70'>${k}</td><td class='py-1'>${v}</td></tr>`;
     const list = arr=>arr.map(x=>`<li class='list-disc ml-5'>${x}</li>`).join('');
 
     // ===== DATA: Adversaries (T2-L3) =====
@@ -680,7 +675,7 @@
     }
 
     function showEnvironment(key){ const e = environmentData[key]; if(!e) return; const tbl = `
-        <table class='w-full text-sm mb-3'><tbody>
+        <table class'w-full text-sm mb-3'><tbody>
           ${row('Type/Tier', `${e.type} • ${e.tier}`)}
           ${row('Difficulty', `<strong>${e.difficulty}</strong>`)}
         </tbody></table>`;
@@ -710,6 +705,24 @@
     window.openModal = openModal; window.closeModal = closeModal;
     window.showAdversary = showAdversary; window.showEnvironment = showEnvironment; window.showSocial = showSocial; window.showLoot = showLoot;
     window.copyReadAloud = copyReadAloud;
+
+    // ===== Sidebar Smooth Scroll (Fix) =====
+    function handleSmoothScroll(event) {
+        event.preventDefault();
+        const targetId = event.currentTarget.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+    
+    // Attach scroll listeners on DOM ready
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('#sidebarNav .nav-link').forEach(link => {
+            link.addEventListener('click', handleSmoothScroll);
+        });
+    });
   </script>
 </body>
 </html>
+
