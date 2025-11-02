@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Twin Cities: The Jewel of Thessia — Daggerheart Adventure (T2‑L3)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --lapis:#254B8F;      /* primary accent */
+      --river:#2A6F7A;      /* secondary */
+      --gold:#C7A64C;       /* trim */
+      --marble:#F3F3F0;     /* paper */
+      --ink:#101317;        /* dark bg */
+      /* House accents */
+      --bellavaro-red:#8C1D1D; --bellavaro-silver:#D1D5DB; --bellavaro-black:#0B0B0B;
+      --marivale-blue:#1D4ED8; --marivale-green:#1E7F4F; --marivale-gold:#C9A227;
+    }
+    .bg-ink{background:var(--ink)} .text-ink{color:var(--ink)}
+    .bg-marble{background:var(--marble)} .text-marble{color:var(--marble)}
+    .text-lapis{color:var(--lapis)} .bg-lapis{background:var(--lapis)}
+    .text-river{color:var(--river)} .bg-river{background:var(--river)}
+    .text-gold{color:var(--gold)} .bg-gold{background:var(--gold)}
+    .ring-gold{--tw-ring-color:var(--gold)}
+    .house-bellavaro{color:var(--bellavaro-red)}
+    .house-marivale{color:var(--marivale-blue)}
+    .scroll-smooth{scroll-behavior:smooth}
+    .modal{position:fixed;inset:0;display:none;background:rgba(0,0,0,.7);}
+    .modal.open{display:flex}
+  </style>
+</head>
+<body class="bg-ink text-marble scroll-smooth">
+  <!-- Layout -->
+  <div class="min-h-screen grid grid-cols-1 lg:grid-cols-[280px_1fr]">
+    <!-- Sidebar -->
+    <aside class="bg-river/30 border-r border-white/10 sticky top-0 h-screen hidden lg:flex flex-col">
+      <div class="p-4 border-b border-white/10">
+        <h1 class="text-xl font-semibold">Twin Cities</h1>
+        <p class="text-sm text-white/70">The Jewel of Thessia • T2‑L3 • 5 PCs (4‑PC trims included)</p>
+      </div>
+      <nav class="p-3 space-y-1 overflow-y-auto">
+        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#welcome">Welcome</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#setting">The Setting</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#threat">The Threat</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#developments">Recent Developments</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#summary">Adventure Summary</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#hooks">Adventure Hooks</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#widgets">GM Widgets</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#beats">Adventure Beats</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#conclusion">Conclusion</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#rewards">Rewards & Loot</a>
+      </nav>
+      <div class="mt-auto p-4 text-xs text-white/60">
+        <div>Palette: <span class="text-lapis">Lapis</span> • <span class="text-river">River</span> • <span class="text-gold">Gold</span></div>
+        <div>Houses: <span class="house-bellavaro">Bellavaro</span> • <span class="house-marivale">Marivale</span></div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="min-h-screen">
+      <!-- Top bar for mobile -->
+      <header class="lg:hidden sticky top-0 z-10 bg-ink/90 backdrop-blur border-b border-white/10 p-3 flex items-center justify-between">
+        <div>
+          <div class="text-sm uppercase tracking-wide text-white/70">Daggerheart — T2‑L3</div>
+          <h1 class="text-lg font-semibold">Twin Cities: The Jewel of Thessia</h1>
+        </div>
+        <a href="#widgets" class="text-xs px-3 py-1 rounded bg-lapis">GM</a>
+      </header>
+
+      <section id="welcome" class="p-6 lg:p-10">
+        <h2 class="text-3xl font-bold text-gold">Welcome</h2>
+        <p class="mt-3 text-white/90">Inspired by <em>Star Trek: TNG — The Outrageous Okona</em>. The party arrives among the twin river cities of <span class="house-bellavaro">Ravenor</span> (Patrician) and <span class="house-marivale">Vienetta</span> (Mercantile), where a feud over the <strong>Jewel of Thessia</strong> and a whispered scandal draw bounty hunters like gulls to a trawler. The charming courier <strong>Okona</strong> has stepped on too many toes; both houses have posted <em>alive‑only</em> bounties. A ruthless <strong>Bounty Queen</strong> intends a very public capture at the <strong>Cattedrale dei Due Ponti</strong>.</p>
+        <div class="mt-4 grid sm:grid-cols-3 gap-3">
+          <div class="p-4 rounded border border-white/10 bg-white/5">
+            <div class="text-xs uppercase text-white/60">Party</div>
+            <div class="font-medium">5 PCs • Tier 2 Level 3</div>
+            <div class="text-white/70 text-sm">Milestone: Level 4 on adventure completion</div>
+          </div>
+          <div class="p-4 rounded border border-white/10 bg-white/5">
+            <div class="text-xs uppercase text-white/60">Mix Target</div>
+            <div class="font-medium">Combat 40% • Social 30% • Urban Explore 30%</div>
+          </div>
+          <div class="p-4 rounded border border-white/10 bg-white/5">
+            <div class="text-xs uppercase text-white/60">Scaling to 4 PCs</div>
+            <div class="text-sm">Trim 20–25% BP; remove one body or hazard lane. Solo: Relentless 3→2 <span class="text-white/60">or</span> reduce damage one die <span class="text-white/60">or</span> remove one Engine lane.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="setting" class="p-6 lg:p-10 border-t border-white/10 bg-white/5">
+        <h2 class="text-2xl font-semibold">The Setting</h2>
+        <ul class="list-disc pl-6 mt-3 space-y-2 text-white/90">
+          <li><strong>Ravenor</strong> — oaths and salons; dueling schools; House <span class="house-bellavaro">Bellavaro</span> (motto: <em>Virtù e Forma</em>).</li>
+          <li><strong>Vienetta</strong> — counting‑houses, docks, customs; House <span class="house-marivale">Marivale</span> (motto: <em>Apri la Via</em>).</li>
+          <li><strong>Twin links</strong> — the great bridge and ferry lanes; festival crowds provide cover and chaos.</li>
+        </ul>
+      </section>
+
+      <section id="threat" class="p-6 lg:p-10">
+        <h2 class="text-2xl font-semibold">The Threat</h2>
+        <p class="mt-2">If the feud and hunter frenzy escalate, the bridge shuts, trade halts, and vigil justice spreads. A staged capture by the Bounty Queen could cement a false narrative and entrench the feud.</p>
+        <div class="mt-4 grid sm:grid-cols-2 gap-3">
+          <div class="p-4 rounded border border-white/10">
+            <div class="text-sm text-white/70">Global Clock</div>
+            <div class="font-medium">Bounty Heat (3–6 steps)</div>
+            <p class="text-white/80 text-sm">Rises with noise, failure, delay; increases rival hunter presence and replaces Rooftops with Warehouse when high.</p>
+          </div>
+          <div class="p-4 rounded border border-white/10">
+            <div class="text-sm text-white/70">Global Clock</div>
+            <div class="font-medium">Festival Eve (4 steps)</div>
+            <p class="text-white/80 text-sm">Markets → bridge fair → lantern night → public capture window at the Cathedral.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="developments" class="p-6 lg:p-10 border-t border-white/10 bg-white/5">
+        <h2 class="text-2xl font-semibold">Recent Developments</h2>
+        <ul class="list-disc pl-6 mt-3 space-y-1 text-white/90">
+          <li>Okona’s courier skiff was impounded; <em>coded letters</em> seized.</li>
+          <li>The Jeweler insists the Jewel is an <em>heirloom reset</em>; receipts seem to point both ways.</li>
+          <li>Midwife seen near Bellavaro estate at odd hours.</li>
+          <li>The Bounty Queen hired the <em>Sibling Hunter Duo</em> as advance team.</li>
+          <li>Ferry log shows a <em>night crossing</em> with a velvet case.</li>
+          <li>Oath‑court suggests a public reading—Queen wants that venue for a stunt.</li>
+        </ul>
+      </section>
+
+      <section id="summary" class="p-6 lg:p-10">
+        <h2 class="text-2xl font-semibold">Adventure Summary</h2>
+        <ol class="list-decimal pl-6 mt-3 space-y-1 text-white/90">
+          <li>Arrive amid bounty buzz in Ravenor/Vienetta.</li>
+          <li>Rescue/meet Okona on the run (Rooftops) <span class="text-white/60">or</span> find him cornered (Warehouse) at higher Heat.</li>
+          <li>Survive early hunter pressure at the docks; seize coded letters.</li>
+          <li>Parlor social at House Bellavaro; pressure to make Okona marry Yanar.</li>
+          <li>Bazaar mini‑boss to crack ciphers and gather provenance.</li>
+          <li>Quiet river crossing; avoid patrols.</li>
+          <li>Gallery social at House Marivale to confirm heirship & betrothal draft.</li>
+          <li>Bridge mini‑boss (the Sibling Hunters) sent by the Queen.</li>
+          <li>Finale Solo: Bounty Queen stages a public capture at the Cathedral; Social Interludes can void her contract and cue the proposal.</li>
+        </ol>
+      </section>
+
+      <section id="hooks" class="p-6 lg:p-10 border-t border-white/10 bg-white/5">
+        <h2 class="text-2xl font-semibold">Adventure Hooks</h2>
+        <ul class="list-disc pl-6 mt-3 space-y-1 text-white/90">
+          <li><strong>The Richest Collar:</strong> both houses post rich <em>alive‑only</em> bounties for Okona.</li>
+          <li><strong>The Rogue’s Bet:</strong> Okona offers a better payout if protected until the truth surfaces.</li>
+          <li><strong>Keep the Bridge Open:</strong> Wardens quietly want the fair to run without curfews.</li>
+        </ul>
+      </section>
+
+      <!-- GM Widgets -->
+      <section id="widgets" class="p-6 lg:p-10">
+        <h2 class="text-2xl font-semibold text-gold">GM Widgets</h2>
+        <div class="grid lg:grid-cols-3 gap-4 mt-4">
+          <!-- Bounty Heat -->
+          <div class="p-4 border border-white/10 rounded">
+            <div class="text-sm text-white/70">Clock</div>
+            <div class="font-semibold">Bounty Heat</div>
+            <div class="flex items-center gap-3 mt-2">
+              <button class="px-2 py-1 bg-white/10 rounded" onclick="adjHeat(-1)">−</button>
+              <input id="heatMeter" type="range" min="0" max="6" step="1" value="0" class="w-full" oninput="syncHeatLabel(this.value)" />
+              <button class="px-2 py-1 bg-white/10 rounded" onclick="adjHeat(1)">+</button>
+            </div>
+            <div class="mt-2 text-sm">Heat: <span id="heatLabel" class="font-medium">0</span> <span class="text-white/60">(≥2 → use Warehouse Standoff instead of Rooftops)</span></div>
+          </div>
+
+          <!-- Revelation Index -->
+          <div class="p-4 border border-white/10 rounded">
+            <div class="text-sm text-white/70">Tracker</div>
+            <div class="font-semibold">Revelation Index</div>
+            <ul class="mt-2 space-y-2 text-sm">
+              <li><label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-[var(--gold)]"/> R1 — Love letters / proposal wording</label></li>
+              <li><label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-[var(--gold)]"/> R2 — Pregnancy proof (midwife note / tincture)</label></li>
+              <li><label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-[var(--gold)]"/> R3 — Jewel provenance (signet seal + bond ledger)</label></li>
+              <li><label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-[var(--gold)]"/> R4 — Timing/route (ferry chit + patrol log)</label></li>
+              <li><label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-[var(--gold)]"/> R5 — Queen’s personal grudge clause</label></li>
+              <li><label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-[var(--gold)]"/> R6 — Betrothal draft (consent)</label></li>
+            </ul>
+          </div>
+
+          <!-- Faction Influence -->
+          <div class="p-4 border border-white/10 rounded">
+            <div class="text-sm text-white/70">Meter</div>
+            <div class="font-semibold">Faction Influence</div>
+            <div class="mt-2 text-xs uppercase text-white/70">House Bellavaro</div>
+            <div class="w-full bg-white/10 rounded h-2 overflow-hidden"><div id="barBell" class="h-2 bg-[color:var(--bellavaro-red)]" style="width:40%"></div></div>
+            <div class="mt-3 text-xs uppercase text-white/70">House Marivale</div>
+            <div class="w-full bg-white/10 rounded h-2 overflow-hidden"><div id="barMari" class="h-2 bg-[color:var(--marivale-blue)]" style="width:40%"></div></div>
+            <div class="mt-3 flex gap-2 text-xs">
+              <button class="px-2 py-1 bg-white/10 rounded" onclick="bumpFaction('bell',5)">+Bell</button>
+              <button class="px-2 py-1 bg-white/10 rounded" onclick="bumpFaction('bell',-5)">−Bell</button>
+              <button class="px-2 py-1 bg-white/10 rounded" onclick="bumpFaction('mari',5)">+Mari</button>
+              <button class="px-2 py-1 bg-white/10 rounded" onclick="bumpFaction('mari',-5)">−Mari</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Beats -->
+      <section id="beats" class="p-6 lg:p-10 border-t border-white/10 bg-white/5">
+        <h2 class="text-2xl font-semibold">Adventure Beats</h2>
+        <p class="text-white/80 mt-2">Each Beat includes a scene goal, environment, suggested adversaries, countdowns, outcomes, and <span class="italic">4‑PC trim</span>. Numbers/stat blocks are T2‑L3 and will be finalized in the adversary pack.</p>
+
+        <!-- Beat Template Component: use HTML details for collapsible -->
+
+        <!-- Beat 1 -->
+        <details class="group border border-white/10 rounded mt-4" open>
+          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+            <span class="font-semibold">Beat 1 — Whispers at Westgate (On‑Ramp)</span>
+            <span class="text-xs text-white/60">Type: Exploration → Social</span>
+          </summary>
+          <div class="p-4 space-y-3">
+            <blockquote class="border-l-4 border-gold pl-4 text-white/90">Crowds press at the gate; hawkers cry festival deals. A Warden’s bell rings for order as a rumor passes from mouth to mouth—Okona, the rogue courier, has been seen on the rooftops.</blockquote>
+            <p><strong>Scene Goal:</strong> Learn feud basics; spot hunter activity; establish Bounty Heat.</p>
+            <p><strong>Environment:</strong> <button class="underline" onclick="showEnvironment('gatePress')">Gate & Market Press</button> (Event).</p>
+            <p><strong>Adversaries:</strong> Informant Skulks; pickpocket Minions; Wardens (Standards) as pressure.</p>
+            <p><strong>Countdown:</strong> “Rumor spreads” (3) → Heat +1.</p>
+            <p><strong>Clue Drop:</strong> R1 fragment (pet‑names letter scrap + Okona’s sigil).</p>
+            <p><strong>Outcomes:</strong> Leads to Rooftops (Beat 2) or Warehouse (Beat 2a) depending on Heat.</p>
+            <p class="text-white/70"><strong>4‑PC Trim:</strong> remove a Warden Standard or convert two Minions to color.</p>
+          </div>
+        </details>
+
+        <!-- Beat 2 -->
+        <details class="group border border-white/10 rounded mt-4">
+          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+            <span class="font-semibold">Beat 2 — Rooftop Rendezvous (Meet Okona)</span>
+            <span class="text-xs text-white/60">Type: Exploration Skill → Social</span>
+          </summary>
+          <div class="p-4 space-y-3">
+            <blockquote class="border-l-4 border-gold pl-4">Wind flutters laundry lines strung like pennants between slate roofs; a figure bounds ahead with a laugh and a backward bow.</blockquote>
+            <p><strong>Goal:</strong> Intercept Okona mid‑chase; decide to help or collar him.</p>
+            <p><strong>Environment:</strong> <button class="underline" onclick="showEnvironment('rooftops')">Rooftops & Laundry Lines</button> (Traversal).</p>
+            <p><strong>Adversaries:</strong> Rookie hunters (Minions); nimble Skulk chaser.</p>
+            <p><strong>Countdown:</strong> “Line snaps” (3) → forced reposition; Heat +1 on failure.</p>
+            <p><strong>Clue Drop:</strong> R4 (ferry chit) + R5 hint (“Queen never forgets a debt”).</p>
+            <p class="text-white/70"><strong>4‑PC Trim:</strong> −2 Minions; keep one Skulk.</p>
+          </div>
+        </details>
+
+        <!-- Beat 2a Warehouse -->
+        <details class="group border border-white/10 rounded mt-4">
+          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+            <span class="font-semibold">Beat 2a — Warehouse Standoff (Heat ≥ 2)</span>
+            <span class="text-xs text-white/60">Type: Combat + Exploration</span>
+          </summary>
+          <div class="p-4 space-y-3">
+            <blockquote class="border-l-4 border-gold pl-4">Stacks of crates loom; a lantern clatters, oil fanning across the floor. Above, a skylight gapes—someone laughs in the rafters.</blockquote>
+            <p><strong>Goal:</strong> PCs find Okona <em>cornered</em> by dockside thugs; break the net.</p>
+            <p><strong>Environment:</strong> <button class="underline" onclick="showEnvironment('warehouse')">Warehouse Engines</button> (Event/Traversal).</p>
+            <p><strong>Adversaries:</strong> Dock Thug Minions (Horde step); Bruiser Foreman (hook & chain); Skulk lookout.</p>
+            <p><strong>Countdown:</strong> “Ignite” (oil slick) → burning lane hazard.</p>
+            <p><strong>Clue Drop:</strong> Smeared signet wax + pawn/ledger stub to Marivale counting‑house.</p>
+            <p class="text-white/70"><strong>4‑PC Trim:</strong> remove the Skulk and reduce Horde by 2.</p>
+          </div>
+        </details>
+
+        <!-- Beat 3 -->
+        <details class="group border border-white/10 rounded mt-4">
+          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+            <span class="font-semibold">Beat 3 — Dockside Debacle (First Dust‑Up)</span>
+            <span class="text-xs text-white/60">Type: Combat</span>
+          </summary>
+          <div class="p-4 space-y-3">
+            <p><strong>Environment:</strong> <button class="underline" onclick="showEnvironment('cranes')">Cranes & Cargo Nets</button> (Event).</p>
+            <p><strong>Adversaries:</strong> Leader (Bounty Factor), 2 Standards, 4 Minions; optional Skulk on a crane.</p>
+            <p><strong>Countdown:</strong> “Crane jams” (3) → hazard lane locks on.</p>
+            <p><strong>Clue Drop:</strong> R1 cipher key fragment from seized satchel.</p>
+            <p class="text-white/70"><strong>4‑PC Trim:</strong> remove 1 Standard or 2 Minions and drop the Skulk.</p>
+          </div>
+        </details>
+
+        <!-- Beat 4 -->
+        <details class="group border border-white/10 rounded mt-4">
+          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+            <span class="font-semibold">Beat 4 — House of Vows (Bellavaro Parlor)</span>
+            <span class="text-xs text-white/60">Type: Social</span>
+          </summary>
+          <div class="p-4 space-y-3">
+            <p><strong>Environment:</strong> <button class="underline" onclick="showEnvironment('oathBraziers')">Oath‑Braziers Chamber</button> (Social).</p>
+            <p><strong>Focus:</strong> Pressure to make Okona marry <em>Yanar Bellavaro</em>; R2 pregnancy indicators.
+            <p><strong>Notes:</strong> Guards loom off‑screen; oathflame flickers on lies (Insight advantage; Stress on egregious deceit).</p>
+          </div>
+        </details>
+
+        <!-- Beat 5 -->
+        <details class="group border border-white/10 rounded mt-4">
+          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+            <span class="font-semibold">Beat 5 — Bazaar of Blades (Mini‑Boss: Boss + Engine)</span>
+            <span class="text-xs text-white/60">Type: Combat + Exploration</span>
+          </summary>
+          <div class="p-4 space-y-3">
+            <p><strong>Environment:</strong> <button class="underline" onclick="showEnvironment('bazaar')">Trap‑Happy Market Lanes</button> (Engine).</p>
+            <p><strong>Adversaries:</strong> Leader (Guild Factor) + Engine; 2 Skulks; 4 Minions.</p>
+            <p><strong>Countdown:</strong> “Guild whistles” (4) → one add wave.</p>
+            <p><strong>Clue Drop:</strong> Decoded R1 (proposal wording) + R3 hint (jeweler ledger stub).</p>
+            <p class="text-white/70"><strong>4‑PC Trim:</strong> remove 1 Skulk; cap add wave to once.</p>
+          </div>
+        </details>
+
+        <!-- Beat 6 -->
+        <details class="group border border-white/10 rounded mt-4">
+          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+            <span class="font-semibold">Beat 6 — River of Secrets (Quiet Crossing)</span>
+            <span class="text-xs text-white/60">Type: Exploration</span>
+          </summary>
+          <div class="p-4 space-y-3">
+            <p><strong>Environment:</strong> <button class="underline" onclick="showEnvironment('ferries')">Moonlit Ferries</button> (Traversal).</p>
+            <p><strong>Focus:</strong> Slip to Vienetta without arrest; patrols are hazards more than foes.</p>
+            <p><strong>Clue Drop:</strong> R4 corroboration from patrol logs.</p>
+          </div>
+        </details>
+
+        <!-- Beat 7 -->
+        <details class="group border border-white/10 rounded mt-4">
+          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+            <span class="font-semibold">Beat 7 — Sun Court Gallery (Marivale Social)</span>
+            <span class="text-xs text-white/60">Type: Social</span>
+          </summary>
+          <div class="p-4 space-y-3">
+            <p><strong>Environment:</strong> <button class="underline" onclick="showEnvironment('gallery')">Sun Court Gallery</button> (Social).</p>
+            <p><strong>Clue Drop:</strong> R3 (signet seal + bond ledger proving heirloom reset) + R6 (betrothal draft).</p>
+          </div>
+        </details>
+
+        <!-- Beat 8 -->
+        <details class="group border border-white/10 rounded mt-4">
+          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+            <span class="font-semibold">Beat 8 — Bridge at Midnight (Mini‑Boss: Duo/Co‑Boss)</span>
+            <span class="text-xs text-white/60">Type: Combat</span>
+          </summary>
+          <div class="p-4 space-y-3">
+            <p><strong>Environment:</strong> <button class="underline" onclick="showEnvironment('bridge')">High Bridge Lanterns</button> (Event).</p>
+            <p><strong>Adversaries:</strong> Co‑Boss Duo (two elite Standards with synergy), 2 Standards, 2 Minions.</p>
+            <p><strong>Countdown:</strong> “Lanterns crash” (3) → burning slick zones.</p>
+            <p><strong>Clue Drop:</strong> R5 (Queen’s personal contract addendum; Okona alive, unmaimed).</p>
+            <p class="text-white/70"><strong>4‑PC Trim:</strong> remove 1 support Standard and 2 Minions <span class="text-white/60">or</span> weaken one Co‑Boss reaction.</p>
+          </div>
+        </details>
+
+        <!-- Beat 9 -->
+        <details class="group border border-white/10 rounded mt-4">
+          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+            <span class="font-semibold">Beat 9 — Queen’s Net (Finale SOLO)</span>
+            <span class="text-xs text-white/60">Type: Combat + Social Interludes</span>
+          </summary>
+          <div class="p-4 space-y-3">
+            <p><strong>Venue:</strong> <em>Cattedrale dei Due Ponti</em> — nave aisles, choir lofts, candelabras, processional ropes.</p>
+            <p><strong>Solo:</strong> <button class="underline" onclick="showAdversary('bountyQueen')">The Bounty Queen</button> (Relentless 3; whip/net/rapier; Momentum on restrains).</p>
+            <p><strong>Engines:</strong> Net‑launchers, shock bolas, crowd surges; bell towers cue hazard pulses. Countdown: “Crowd Panic” (4) → hazardous pew aisles.</p>
+            <p><strong>Social Interludes (1/round):</strong> Present R‑clues to sway the crowd & Wardens. Each success disables an Engine lane or strips a Queen reaction; three successes void the public contract and force withdrawal/arrest. Cue <em>Okona’s speech</em> → proposal.</p>
+            <p class="text-white/70"><strong>4‑PC Trim:</strong> Relentless 3→2 <span class="text-white/60">or</span> −1 die damage <span class="text-white/60">or</span> remove one Engine lane.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- Conclusion & Rewards -->
+      <section id="conclusion" class="p-6 lg:p-10">
+        <h2 class="text-2xl font-semibold">Conclusion</h2>
+        <ul class="list-disc pl-6 mt-3 space-y-1 text-white/90">
+          <li><strong>Public Exoneration:</strong> Contract voided; lovers recognized; swift private wedding; PCs gain city favor.</li>
+          <li><strong>Quiet Justice:</strong> Families keep truth discreet; PCs paid to hush.</li>
+          <li><strong>Fractured Peace:</strong> Queen escapes, swears revenge; river‑heist sequel.</li>
+        </ul>
+      </section>
+
+      <section id="rewards" class="p-6 lg:p-10 border-t border-white/10 bg-white/5">
+        <h2 class="text-2xl font-semibold">Rewards & Loot</h2>
+        <ul class="list-disc pl-6 mt-3 space-y-1 text-white/90">
+          <li><strong>Writ of Free Passage:</strong> official letter granting toll‑free transit and priority moorage in Ravenor & Vienetta.</li>
+          <li><strong>River Wardens’ Silver Brooch:</strong> marks PCs as deputies; advantage on checks with Wardens once/beat.</li>
+          <li class="text-white/70"><em>Note:</em> The Jewel of Thessia is a Marivale ring given to <strong>Yanar</strong>—a story artifact, not a PC reward.</li>
+        </ul>
+      </section>
+
+      <!-- Modals -->
+      <div id="modal" class="modal items-start justify-center p-4">
+        <div class="max-w-3xl w-full mt-16 rounded-lg border border-white/10 bg-ink shadow-xl">
+          <div class="flex items-center justify-between px-4 py-3 border-b border-white/10">
+            <h3 id="modalTitle" class="text-lg font-semibold">Stat Block</h3>
+            <button class="px-2 py-1 bg-white/10 rounded" onclick="closeModal()">Close</button>
+          </div>
+          <div id="modalBody" class="p-4 text-sm"></div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="p-6 lg:p-10 text-xs text-white/60">
+        Built for Daggerheart SRD • Adversary math: Making Custom Adversaries v1.4 • Solo principles: Single Adversary Advice. UI: modal stat blocks, collapsible beats, clue & faction widgets. Palette: cool river + lapis + gold.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Minimal JS: meters & modals
+    function adjHeat(delta){
+      const slider = document.getElementById('heatMeter');
+      let v = Math.max(0, Math.min(6, Number(slider.value)+delta));
+      slider.value = v; syncHeatLabel(v);
+    }
+    function syncHeatLabel(v){ document.getElementById('heatLabel').textContent = v; }
+    function bumpFaction(which, amt){
+      if(which==='bell'){
+        const el=document.getElementById('barBell');
+        const cur=parseInt(el.style.width)||0; el.style.width=Math.max(0,Math.min(100,cur+amt))+"%";
+      } else {
+        const el=document.getElementById('barMari');
+        const cur=parseInt(el.style.width)||0; el.style.width=Math.max(0,Math.min(100,cur+amt))+"%";
+      }
+    }
+
+    const adversaryData = {
+      bountyQueen: {
+        name: 'The Bounty Queen', source:'Original', role:'Solo', tier:'T2‑L3', relentless:3,
+        difficulty:'TBD', thresholds:'Minor/Major/Severe: TBD', hp:'TBD', stress:'TBD', atk:'+TBD', damage:'TBD', experience:'Solo 5 BP',
+        features:[
+          'Whip Lash — pull and Restrain; Momentum on restrains',
+          'Casting Net — Close burst restrain/immobilize; counters forced movement',
+          'Duelist’s Feint — high‑accuracy rapier strike; marks a priority target',
+          'Reaction — Cut the Line or Ricochet Parry',
+          'Fear Spends — Keg‑burst AOE; whistle add wave; bind hazard in nave aisle'
+        ]
+      },
+      siblingDuo:{ name:'Sibling Hunter Duo', source:'Rivals', role:'Co‑Boss (2x Elite Standards)', tier:'T2‑L3', relentless:1,
+        difficulty:'TBD', thresholds:'TBD', hp:'TBD', stress:'TBD', atk:'+TBD', damage:'TBD', experience:'~4–6 BP',
+        features:['Coordinated Pincer','Lantern Kick (ignite slicks)','Reaction: Cover Each Other'] },
+      bountyFactor:{ name:'Bounty Factor', source:'Guild', role:'Leader', tier:'T2‑L3', relentless:1,
+        difficulty:'TBD', thresholds:'TBD', hp:'TBD', stress:'TBD', atk:'+TBD', damage:'TBD', experience:'3 BP',
+        features:['Command Whistle (grant action)','Ledger Shield (temp guard)','Call Reinforcements (minions)'] },
+      dockMinions:{ name:'Dock Thugs', source:'Street', role:'Minions (Horde step)', tier:'T2‑L3', relentless:0,
+        difficulty:'TBD', thresholds:'—', hp:'1 hit', stress:'—', atk:'+TBD', damage:'TBD', experience:'Horde BP per step',
+        features:['Mob Up','Shove to Water','Cudgel Rush'] },
+      foreman:{ name:'Foreman with Hook', source:'Street', role:'Bruiser', tier:'T2‑L3', relentless:1,
+        difficulty:'TBD', thresholds:'TBD', hp:'TBD', stress:'TBD', atk:'+TBD', damage:'TBD', experience:'2–3 BP',
+        features:['Hook & Chain (pull/knockdown)','Barrel Toss','Anchor Your Feet'] },
+      skulkLookout:{ name:'Lookout in Rafters', source:'Street', role:'Skulk', tier:'T2‑L3', relentless:0,
+        difficulty:'TBD', thresholds:'TBD', hp:'TBD', stress:'TBD', atk:'+TBD', damage:'TBD', experience:'2 BP',
+        features:['Shadow Perch','Pinning Shot','Rope Slide'] }
+    };
+
+    const environmentData = {
+      gatePress:{ name:'Gate & Market Press', type:'Event', tier:'T2', difficulty:'TBD', dcs:'TBD', damage:'TBD', impulses:['Crowd surges','Hawkers obstruct','Wardens inspect'] },
+      rooftops:{ name:'Rooftops & Laundry Lines', type:'Traversal', tier:'T2', difficulty:'TBD', dcs:'TBD', damage:'Fall: TBD', impulses:['Wind gust','Snapping line','Brittle slate'] },
+      warehouse:{ name:'Warehouse Engines', type:'Event/Traversal', tier:'T2', difficulty:'TBD', dcs:'TBD', damage:'Fire slick: TBD', impulses:['Pulley swing','Oil spill ignite','Skylight drop','Vermin distraction'] },
+      cranes:{ name:'Cranes & Cargo Nets', type:'Event', tier:'T2', difficulty:'TBD', dcs:'TBD', damage:'Crate slam: TBD', impulses:['Swinging crates','Loose grain','River swell edge push'] },
+      bazaar:{ name:'Trap‑Happy Market Lanes', type:'Engine', tier:'T2', difficulty:'TBD', dcs:'TBD', damage:'Caltrops/roll: TBD', impulses:['Net‑casters','Rolling casks','Caltrops'] },
+      ferries:{ name:'Moonlit Ferries', type:'Traversal', tier:'T2', difficulty:'TBD', dcs:'TBD', damage:'Current: TBD', impulses:['Current shift','Lantern sweeps','Patrol calls'] },
+      gallery:{ name:'Sun Court Gallery', type:'Social', tier:'T2', difficulty:'TBD', dcs:'TBD', damage:'—', impulses:['Witness interjects','Document review advantage'] },
+      bridge:{ name:'High Bridge Lanterns', type:'Event', tier:'T2', difficulty:'TBD', dcs:'TBD', damage:'Burning slick: TBD', impulses:['Crosswind','Swinging lanterns','Missing stones'] },
+      cathedral:{ name:'Cattedrale dei Due Ponti — Capture Engines', type:'Event', tier:'T2', difficulty:'TBD', dcs:'TBD', damage:'Shock bola/net: TBD', impulses:['Net‑launcher lane','Bell tower pulse','Crowd panic zones'] }
+    };
+
+    function showAdversary(key){
+      const a = adversaryData[key]; if(!a) return;
+      const rows = [
+        ['Role/Tier', `${a.role} • ${a.tier}`],
+        ['Relentless', a.relentless ?? '—'],
+        ['Difficulty', a.difficulty],
+        ['ATK', a.atk],
+        ['Damage', a.damage],
+        ['HP / Stress', `${a.hp} / ${a.stress}`],
+        ['Thresholds', a.thresholds],
+        ['Experience', a.experience]
+      ].map(([k,v])=>`<tr class='border-b border-white/10'><td class='py-1 pr-3 text-white/70'>${k}</td><td class='py-1'>${v}</td></tr>`).join('');
+      const feats = (a.features||[]).map(f=>`<li class='list-disc ml-5'>${f}</li>`).join('');
+      const html = `
+        <div class='text-xs uppercase text-white/60 mb-1'>${a.source}</div>
+        <h4 class='text-lg font-semibold mb-2'>${a.name}</h4>
+        <table class='w-full text-sm mb-3'>${rows}</table>
+        <div class='text-sm font-semibold mb-1'>Features</div>
+        <ul class='space-y-1'>${feats}</ul>`;
+      openModal('Adversary', html);
+    }
+    function showEnvironment(key){
+      const e = environmentData[key]; if(!e) return;
+      const rows = [
+        ['Type/Tier', `${e.type} • ${e.tier}`],
+        ['Difficulty', e.difficulty],
+        ['Bench DCs', e.dcs],
+        ['Damage Bench', e.damage]
+      ].map(([k,v])=>`<tr class='border-b border-white/10'><td class='py-1 pr-3 text-white/70'>${k}</td><td class='py-1'>${v}</td></tr>`).join('');
+      const impulses = (e.impulses||[]).map(f=>`<li class='list-disc ml-5'>${f}</li>`).join('');
+      const html = `
+        <h4 class='text-lg font-semibold mb-2'>${e.name}</h4>
+        <table class='w-full text-sm mb-3'>${rows}</table>
+        <div class='text-sm font-semibold mb-1'>Impulses</div>
+        <ul class='space-y-1'>${impulses}</ul>`;
+      openModal('Environment', html);
+    }
+    function openModal(title, html){
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalBody').innerHTML = html;
+      document.getElementById('modal').classList.add('open');
+    }
+    function closeModal(){ document.getElementById('modal').classList.remove('open'); }
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+  </script>
+</body>
+</html>
