@@ -7,11 +7,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{
-      --lapis:#254B8F;      /* primary accent */
-      --river:#2A6F7A;      /* secondary */
-      --gold:#C7A64C;       /* trim */
-      --marble:#F3F3F0;     /* paper */
-      --ink:#101317;        /* dark bg */
+      --lapis:#3E6EDC;      /* primary accent (brighter royal) */
+      
+      --river:#2FA6A0;      /* secondary (brighter teal) */
+      --river-dark:#238B84;   /* sidebar (slightly darker teal) */
+      --gold:#E2C061;       /* trim (lighter gold) */
+      --marble:#F6F8FB;     /* paper (brighter) */
+      --ink:#141E2C;        /* dark bg (lighter) */
       /* House accents */
       --bellavaro-red:#8C1D1D; --bellavaro-silver:#D1D5DB; --bellavaro-black:#0B0B0B;
       --marivale-blue:#1D4ED8; --marivale-green:#1E7F4F; --marivale-gold:#C9A227;
@@ -20,6 +22,12 @@
     .bg-marble{background:var(--marble)} .text-marble{color:var(--marble)}
     .text-lapis{color:var(--lapis)} .bg-lapis{background:var(--lapis)}
     .text-river{color:var(--river)} .bg-river{background:var(--river)}
+    
+    .bg-river-dark{background:var(--river-dark)}
+    .sidebar-grad{background:
+      linear-gradient(200deg, rgba(0,0,0,.12) 0%, rgba(0,0,0,.24) 60%),
+      linear-gradient(200deg, var(--river-dark) 0%, #1E7F79 60%, #2FA6A0 100%);
+    }
     .text-gold{color:var(--gold)} .bg-gold{background:var(--gold)}
     .ring-gold{--tw-ring-color:var(--gold)}
     .house-bellavaro{color:var(--bellavaro-red)}
@@ -33,22 +41,22 @@
   <!-- Layout -->
   <div class="min-h-screen grid grid-cols-1 lg:grid-cols-[280px_1fr]">
     <!-- Sidebar -->
-    <aside class="bg-river/30 border-r border-white/10 sticky top-0 h-screen hidden lg:flex flex-col">
+    <aside class="sidebar-grad border-r border-white/10 sticky top-0 h-screen hidden lg:flex flex-col">
       <div class="p-4 border-b border-white/10">
         <h1 class="text-xl font-semibold">Twin Cities</h1>
         <p class="text-sm text-white/70">The Jewel of Thessia • T2‑L3 • 5 PCs (4‑PC trims included)</p>
       </div>
       <nav class="p-3 space-y-1 overflow-y-auto">
-        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#welcome">Welcome</a>
-        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#setting">The Setting</a>
-        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#threat">The Threat</a>
-        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#developments">Recent Developments</a>
-        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#summary">Adventure Summary</a>
-        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#hooks">Adventure Hooks</a>
-        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#widgets">GM Widgets</a>
-        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#beats">Adventure Beats</a>
-        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#conclusion">Conclusion</a>
-        <a class="block px-3 py-2 rounded hover:bg-white/10" href="#rewards">Rewards & Loot</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/20" href="#welcome">Welcome</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/20" href="#setting">The Setting</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/20" href="#threat">The Threat</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/20" href="#developments">Recent Developments</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/20" href="#summary">Adventure Summary</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/20" href="#hooks">Adventure Hooks</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/20" href="#widgets">GM Widgets</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/20" href="#beats">Adventure Beats</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/20" href="#conclusion">Conclusion</a>
+        <a class="block px-3 py-2 rounded hover:bg-white/20" href="#rewards">Rewards & Loot</a>
       </nav>
       <div class="mt-auto p-4 text-xs text-white/60">
         <div>Palette: <span class="text-lapis">Lapis</span> • <span class="text-river">River</span> • <span class="text-gold">Gold</span></div>
@@ -59,7 +67,7 @@
     <!-- Main -->
     <main class="min-h-screen">
       <!-- Top bar for mobile -->
-      <header class="lg:hidden sticky top-0 z-10 bg-ink/90 backdrop-blur border-b border-white/10 p-3 flex items-center justify-between">
+      <header class="lg:hidden sticky top-0 z-10 bg-ink/80 backdrop-blur border-b border-white/10 p-3 flex items-center justify-between">
         <div>
           <div class="text-sm uppercase tracking-wide text-white/70">Daggerheart — T2‑L3</div>
           <h1 class="text-lg font-semibold">Twin Cities: The Jewel of Thessia</h1>
@@ -71,23 +79,23 @@
         <h2 class="text-3xl font-bold text-gold">Welcome</h2>
         <p class="mt-3 text-white/90">Inspired by <em>Star Trek: TNG — The Outrageous Okona</em>. The party arrives among the twin river cities of <span class="house-bellavaro">Ravenor</span> (Patrician) and <span class="house-marivale">Vienetta</span> (Mercantile), where a feud over the <strong>Jewel of Thessia</strong> and a whispered scandal draw bounty hunters like gulls to a trawler. The charming courier <strong>Okona</strong> has stepped on too many toes; both houses have posted <em>alive‑only</em> bounties. A ruthless <strong>Bounty Queen</strong> intends a very public capture at the <strong>Cattedrale dei Due Ponti</strong>.</p>
         <div class="mt-4 grid sm:grid-cols-3 gap-3">
-          <div class="p-4 rounded border border-white/10 bg-white/5">
+          <div class="p-4 rounded border border-white/10 bg-white/15">
             <div class="text-xs uppercase text-white/60">Party</div>
             <div class="font-medium">5 PCs • Tier 2 Level 3</div>
             <div class="text-white/70 text-sm">Milestone: Level 4 on adventure completion</div>
           </div>
-          <div class="p-4 rounded border border-white/10 bg-white/5">
+          <div class="p-4 rounded border border-white/10 bg-white/15">
             <div class="text-xs uppercase text-white/60">Mix Target</div>
             <div class="font-medium">Combat 40% • Social 30% • Urban Explore 30%</div>
           </div>
-          <div class="p-4 rounded border border-white/10 bg-white/5">
+          <div class="p-4 rounded border border-white/10 bg-white/15">
             <div class="text-xs uppercase text-white/60">Scaling to 4 PCs</div>
             <div class="text-sm">Trim 20–25% BP; remove one body or hazard lane. Solo: Relentless 3→2 <span class="text-white/60">or</span> reduce damage one die <span class="text-white/60">or</span> remove one Engine lane.</div>
           </div>
         </div>
       </section>
 
-      <section id="setting" class="p-6 lg:p-10 border-t border-white/10 bg-white/5">
+      <section id="setting" class="p-6 lg:p-10 border-t border-white/10 bg-white/15">
         <h2 class="text-2xl font-semibold">The Setting</h2>
         <ul class="list-disc pl-6 mt-3 space-y-2 text-white/90">
           <li><strong>Ravenor</strong> — oaths and salons; dueling schools; House <span class="house-bellavaro">Bellavaro</span> (motto: <em>Virtù e Forma</em>).</li>
@@ -113,7 +121,7 @@
         </div>
       </section>
 
-      <section id="developments" class="p-6 lg:p-10 border-t border-white/10 bg-white/5">
+      <section id="developments" class="p-6 lg:p-10 border-t border-white/10 bg-white/15">
         <h2 class="text-2xl font-semibold">Recent Developments</h2>
         <ul class="list-disc pl-6 mt-3 space-y-1 text-white/90">
           <li>Okona’s courier skiff was impounded; <em>coded letters</em> seized.</li>
@@ -140,7 +148,7 @@
         </ol>
       </section>
 
-      <section id="hooks" class="p-6 lg:p-10 border-t border-white/10 bg-white/5">
+      <section id="hooks" class="p-6 lg:p-10 border-t border-white/10 bg-white/15">
         <h2 class="text-2xl font-semibold">Adventure Hooks</h2>
         <ul class="list-disc pl-6 mt-3 space-y-1 text-white/90">
           <li><strong>The Richest Collar:</strong> both houses post rich <em>alive‑only</em> bounties for Okona.</li>
@@ -158,9 +166,9 @@
             <div class="text-sm text-white/70">Clock</div>
             <div class="font-semibold">Bounty Heat</div>
             <div class="flex items-center gap-3 mt-2">
-              <button class="px-2 py-1 bg-white/10 rounded" onclick="adjHeat(-1)">−</button>
+              <button class="px-2 py-1 bg-white/20 rounded" onclick="adjHeat(-1)">−</button>
               <input id="heatMeter" type="range" min="0" max="6" step="1" value="0" class="w-full" oninput="syncHeatLabel(this.value)" />
-              <button class="px-2 py-1 bg-white/10 rounded" onclick="adjHeat(1)">+</button>
+              <button class="px-2 py-1 bg-white/20 rounded" onclick="adjHeat(1)">+</button>
             </div>
             <div class="mt-2 text-sm">Heat: <span id="heatLabel" class="font-medium">0</span> <span class="text-white/60">(≥2 → use Warehouse Standoff instead of Rooftops)</span></div>
           </div>
@@ -184,21 +192,21 @@
             <div class="text-sm text-white/70">Meter</div>
             <div class="font-semibold">Faction Influence</div>
             <div class="mt-2 text-xs uppercase text-white/70">House Bellavaro</div>
-            <div class="w-full bg-white/10 rounded h-2 overflow-hidden"><div id="barBell" class="h-2 bg-[color:var(--bellavaro-red)]" style="width:40%"></div></div>
+            <div class="w-full bg-white/20 rounded h-2 overflow-hidden"><div id="barBell" class="h-2 bg-[color:var(--bellavaro-red)]" style="width:40%"></div></div>
             <div class="mt-3 text-xs uppercase text-white/70">House Marivale</div>
-            <div class="w-full bg-white/10 rounded h-2 overflow-hidden"><div id="barMari" class="h-2 bg-[color:var(--marivale-blue)]" style="width:40%"></div></div>
+            <div class="w-full bg-white/20 rounded h-2 overflow-hidden"><div id="barMari" class="h-2 bg-[color:var(--marivale-blue)]" style="width:40%"></div></div>
             <div class="mt-3 flex gap-2 text-xs">
-              <button class="px-2 py-1 bg-white/10 rounded" onclick="bumpFaction('bell',5)">+Bell</button>
-              <button class="px-2 py-1 bg-white/10 rounded" onclick="bumpFaction('bell',-5)">−Bell</button>
-              <button class="px-2 py-1 bg-white/10 rounded" onclick="bumpFaction('mari',5)">+Mari</button>
-              <button class="px-2 py-1 bg-white/10 rounded" onclick="bumpFaction('mari',-5)">−Mari</button>
+              <button class="px-2 py-1 bg-white/20 rounded" onclick="bumpFaction('bell',5)">+Bell</button>
+              <button class="px-2 py-1 bg-white/20 rounded" onclick="bumpFaction('bell',-5)">−Bell</button>
+              <button class="px-2 py-1 bg-white/20 rounded" onclick="bumpFaction('mari',5)">+Mari</button>
+              <button class="px-2 py-1 bg-white/20 rounded" onclick="bumpFaction('mari',-5)">−Mari</button>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Beats -->
-      <section id="beats" class="p-6 lg:p-10 border-t border-white/10 bg-white/5">
+      <section id="beats" class="p-6 lg:p-10 border-t border-white/10 bg-white/15">
         <h2 class="text-2xl font-semibold">Adventure Beats</h2>
         <p class="text-white/80 mt-2">Each Beat includes a scene goal, environment, suggested adversaries, countdowns, outcomes, and <span class="italic">4‑PC trim</span>. Numbers/stat blocks are T2‑L3 and will be finalized in the adversary pack.</p>
 
@@ -206,7 +214,7 @@
 
         <!-- Beat 1 -->
         <details class="group border border-white/10 rounded mt-4" open>
-          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+          <summary class="cursor-pointer select-none p-4 bg-ink/50 hover:bg-ink/30 flex items-center justify-between">
             <span class="font-semibold">Beat 1 — Whispers at Westgate (On‑Ramp)</span>
             <span class="text-xs text-white/60">Type: Exploration → Social</span>
           </summary>
@@ -224,7 +232,7 @@
 
         <!-- Beat 2 -->
         <details class="group border border-white/10 rounded mt-4">
-          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+          <summary class="cursor-pointer select-none p-4 bg-ink/50 hover:bg-ink/30 flex items-center justify-between">
             <span class="font-semibold">Beat 2 — Rooftop Rendezvous (Meet Okona)</span>
             <span class="text-xs text-white/60">Type: Exploration Skill → Social</span>
           </summary>
@@ -241,7 +249,7 @@
 
         <!-- Beat 2a Warehouse -->
         <details class="group border border-white/10 rounded mt-4">
-          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+          <summary class="cursor-pointer select-none p-4 bg-ink/50 hover:bg-ink/30 flex items-center justify-between">
             <span class="font-semibold">Beat 2a — Warehouse Standoff (Heat ≥ 2)</span>
             <span class="text-xs text-white/60">Type: Combat + Exploration</span>
           </summary>
@@ -258,7 +266,7 @@
 
         <!-- Beat 3 -->
         <details class="group border border-white/10 rounded mt-4">
-          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+          <summary class="cursor-pointer select-none p-4 bg-ink/50 hover:bg-ink/30 flex items-center justify-between">
             <span class="font-semibold">Beat 3 — Dockside Debacle (First Dust‑Up)</span>
             <span class="text-xs text-white/60">Type: Combat</span>
           </summary>
@@ -273,7 +281,7 @@
 
         <!-- Beat 4 -->
         <details class="group border border-white/10 rounded mt-4">
-          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+          <summary class="cursor-pointer select-none p-4 bg-ink/50 hover:bg-ink/30 flex items-center justify-between">
             <span class="font-semibold">Beat 4 — House of Vows (Bellavaro Parlor)</span>
             <span class="text-xs text-white/60">Type: Social</span>
           </summary>
@@ -286,7 +294,7 @@
 
         <!-- Beat 5 -->
         <details class="group border border-white/10 rounded mt-4">
-          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+          <summary class="cursor-pointer select-none p-4 bg-ink/50 hover:bg-ink/30 flex items-center justify-between">
             <span class="font-semibold">Beat 5 — Bazaar of Blades (Mini‑Boss: Boss + Engine)</span>
             <span class="text-xs text-white/60">Type: Combat + Exploration</span>
           </summary>
@@ -301,7 +309,7 @@
 
         <!-- Beat 6 -->
         <details class="group border border-white/10 rounded mt-4">
-          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+          <summary class="cursor-pointer select-none p-4 bg-ink/50 hover:bg-ink/30 flex items-center justify-between">
             <span class="font-semibold">Beat 6 — River of Secrets (Quiet Crossing)</span>
             <span class="text-xs text-white/60">Type: Exploration</span>
           </summary>
@@ -314,7 +322,7 @@
 
         <!-- Beat 7 -->
         <details class="group border border-white/10 rounded mt-4">
-          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+          <summary class="cursor-pointer select-none p-4 bg-ink/50 hover:bg-ink/30 flex items-center justify-between">
             <span class="font-semibold">Beat 7 — Sun Court Gallery (Marivale Social)</span>
             <span class="text-xs text-white/60">Type: Social</span>
           </summary>
@@ -326,7 +334,7 @@
 
         <!-- Beat 8 -->
         <details class="group border border-white/10 rounded mt-4">
-          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+          <summary class="cursor-pointer select-none p-4 bg-ink/50 hover:bg-ink/30 flex items-center justify-between">
             <span class="font-semibold">Beat 8 — Bridge at Midnight (Mini‑Boss: Duo/Co‑Boss)</span>
             <span class="text-xs text-white/60">Type: Combat</span>
           </summary>
@@ -341,7 +349,7 @@
 
         <!-- Beat 9 -->
         <details class="group border border-white/10 rounded mt-4">
-          <summary class="cursor-pointer select-none p-4 bg-ink/60 hover:bg-ink/40 flex items-center justify-between">
+          <summary class="cursor-pointer select-none p-4 bg-ink/50 hover:bg-ink/30 flex items-center justify-between">
             <span class="font-semibold">Beat 9 — Queen’s Net (Finale SOLO)</span>
             <span class="text-xs text-white/60">Type: Combat + Social Interludes</span>
           </summary>
@@ -365,7 +373,7 @@
         </ul>
       </section>
 
-      <section id="rewards" class="p-6 lg:p-10 border-t border-white/10 bg-white/5">
+      <section id="rewards" class="p-6 lg:p-10 border-t border-white/10 bg-white/15">
         <h2 class="text-2xl font-semibold">Rewards & Loot</h2>
         <ul class="list-disc pl-6 mt-3 space-y-1 text-white/90">
           <li><strong>Writ of Free Passage:</strong> official letter granting toll‑free transit and priority moorage in Ravenor & Vienetta.</li>
@@ -379,7 +387,7 @@
         <div class="max-w-3xl w-full mt-16 rounded-lg border border-white/10 bg-ink shadow-xl">
           <div class="flex items-center justify-between px-4 py-3 border-b border-white/10">
             <h3 id="modalTitle" class="text-lg font-semibold">Stat Block</h3>
-            <button class="px-2 py-1 bg-white/10 rounded" onclick="closeModal()">Close</button>
+            <button class="px-2 py-1 bg-white/20 rounded" onclick="closeModal()">Close</button>
           </div>
           <div id="modalBody" class="p-4 text-sm"></div>
         </div>
